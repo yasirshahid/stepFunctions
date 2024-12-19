@@ -8,7 +8,7 @@
     },
     "BroadcastToSqs": {
       "Type": "Task",
-      "Resource": "arn:aws:states---------------------",
+      "Resource": "arn:aws:states:::sns:publish",
       "Parameters": {
         "QueueUrl": "",
         "MessageBody": {
