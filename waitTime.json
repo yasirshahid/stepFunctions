@@ -6,6 +6,13 @@
       "Comment": "Wait state",
       "Type": "Wait",
       "Seconds": 5,
+      "Next": "SquareNumer"
+    },
+    "SquareNumer": {
+      "Comment": "Return square of the input number",
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us -------------------",
+      "TimeoutSeconds": 10,
       "Next": "HelloWorld"
     },
     "HelloWorld": {
