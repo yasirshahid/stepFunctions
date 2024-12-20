@@ -1,0 +1,29 @@
+{
+  "Comment": "A Hello World example of the Amazon States Language using a Pass state",
+  "StartAt": "GetFileType",
+  "States": {
+    "GetFileType": {
+      "Type": "Pass",
+      "Next": "CheckFileType"
+    },
+    "CheckFileType": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.results.fileType",
+          "StringEquals": "jpg",
+          "Next": "ProcessFile"
+        }
+      ],
+      "Default": "DeleteSourceFile"
+    },
+    "DeleteSourceFile": {
+      "Type": "Pass",
+      "End": true
+    },
+    "ProcessFile": {
+      "Type": "Pass",
+      "End": true
+    }
+  }
+}
